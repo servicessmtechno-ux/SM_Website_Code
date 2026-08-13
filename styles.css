@@ -251,6 +251,18 @@ body {
     transition: opacity 0.4s ease;
 }
 
+.slide.slide-repair {
+    background-image: url('images/GeneralRepair.png');
+}
+
+.slide.slide-cleaning {
+    background-image: url('images/DeepCleaning.png');
+}
+
+.slide.slide-installation {
+    background-image: url('images/Installation.png');
+}
+
 .slide.active {
     opacity: 1;
 }
