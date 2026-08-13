@@ -67,6 +67,17 @@ dots.forEach((dot, index) => {
 // Auto slide
 setInterval(() => showSlide(currentSlide + 1), 5000);
 
+// Clone marquee tracks for seamless loop
+const testimonialTrack = document.querySelector('.testimonial-track');
+if (testimonialTrack) {
+    testimonialTrack.innerHTML += testimonialTrack.innerHTML;
+}
+
+const brandsTrack = document.querySelector('.brands-track');
+if (brandsTrack) {
+    brandsTrack.innerHTML += brandsTrack.innerHTML;
+}
+
 // Intersection Observer for animations
 const observerOptions = {
     threshold: 0.2,
@@ -99,8 +110,6 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Testimonial Slider
-const testimonialTrack = document.querySelector('.testimonial-track');
 const testPrev = document.querySelector('.test-prev');
 const testNext = document.querySelector('.test-next');
 let testimonialIndex = 0;

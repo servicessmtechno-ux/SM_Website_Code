@@ -1339,6 +1339,14 @@ body {
     margin-bottom: 15px;
 }
 
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 6px;
+}
+
 .form-group input,
 .form-group select,
 .form-group textarea {
