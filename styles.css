@@ -252,15 +252,15 @@ body {
 }
 
 .slide.slide-repair {
-    background-image: url('images/GeneralRepair.png');
+    background-image: url('images/GeneralRepair.webp');
 }
 
 .slide.slide-cleaning {
-    background-image: url('images/DeepCleaning.png');
+    background-image: url('images/DeepCleaning.webp');
 }
 
 .slide.slide-installation {
-    background-image: url('images/Installation.png');
+    background-image: url('images/Installation.webp');
 }
 
 .slide.active {
