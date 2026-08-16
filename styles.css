@@ -1435,18 +1435,26 @@ body {
 .footer-social a {
     width: 45px;
     height: 45px;
-    background: rgba(255,255,255,0.1);
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--white);
+    text-decoration: none;
     transition: all 0.3s ease;
 }
 
+.footer-social a.facebook {
+    background: #1877F2;
+}
+
+.footer-social a.instagram {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+
 .footer-social a:hover {
-    background: var(--primary);
-    transform: translateY(-3px);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .footer-col h4 {
