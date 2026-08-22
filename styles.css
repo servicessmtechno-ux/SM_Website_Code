@@ -604,6 +604,13 @@ body {
     margin: 0 auto;
 }
 
+.section-disclaimer {
+    font-size: 0.85rem;
+    color: var(--gray);
+    font-style: italic;
+    margin-top: 8px;
+}
+
 /* Services Section */
 .services {
     padding: 60px 0;
@@ -1629,6 +1636,74 @@ body {
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 1000;
+}
+
+/* Disclaimer Section */
+.disclaimer-section {
+    padding: 30px 0;
+    background: #fff8e1;
+    border-top: 1px solid #ffe082;
+    border-bottom: 1px solid #ffe082;
+}
+
+.disclaimer-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 20px 25px;
+    background: #fffde7;
+    border-radius: 12px;
+    border: 1px solid #fff176;
+}
+
+.disclaimer-box i {
+    color: #f9a825;
+    font-size: 1.2rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.disclaimer-box p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #5d4037;
+    line-height: 1.7;
+}
+
+.disclaimer-box strong {
+    color: #3e2723;
+}
+
+.footer-bottom .footer-disclaimer {
+    font-size: 0.8rem;
+    color: var(--gray);
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.footer-bottom .footer-business-info {
+    font-size: 0.85rem;
+    color: var(--gray-light);
+    margin-top: 8px;
+}
+
+.about-owner {
+    margin-top: 20px;
+    padding: 15px 20px;
+    background: var(--light);
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.04);
+}
+
+.about-owner p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--dark);
+}
+
+.about-owner i {
+    color: var(--primary);
+    margin-right: 8px;
 }
 
 .back-to-top.visible {
