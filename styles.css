@@ -45,6 +45,26 @@ body {
     padding: 0 24px;
 }
 
+/* Skip to Content */
+.skip-to-content {
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 0 0 8px 8px;
+    font-weight: 600;
+    z-index: 10000;
+    text-decoration: none;
+    transition: top 0.3s ease;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
 /* Preloader */
 .preloader {
     position: fixed;
@@ -2010,7 +2030,265 @@ body {
         padding: 30px 20px;
     }
     
+    .faq-question {
+        font-size: 0.95rem;
+        padding: 16px 18px;
+    }
+    
+    .faq-answer p {
+        padding: 0 18px 16px;
+        font-size: 0.9rem;
+    }
+    
     .footer-bottom {
         font-size: 0.85rem;
+    }
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 100px 0;
+    background: var(--light);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--white);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark);
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: var(--primary);
+}
+
+.faq-question i {
+    font-size: 0.8rem;
+    color: var(--primary);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 15px;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px;
+}
+
+.faq-answer p {
+    padding: 0 24px 20px;
+    color: var(--gray);
+    line-height: 1.8;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.faq-answer a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.faq-answer a:hover {
+    text-decoration: underline;
+}
+
+/* Common Problems Section */
+.common-problems {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.problems-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.problem-card {
+    background: var(--light);
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.problem-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.problem-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 102, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.problem-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 12px;
+}
+
+.problem-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* Brand Services Section */
+.brand-services {
+    padding: 100px 0;
+    background: var(--light);
+}
+
+.brand-services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.brand-service-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.brand-service-card:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.brand-service-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-service-card h3 i {
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+.brand-service-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* Home Service Section */
+.home-service-section {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.home-service-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.home-service-text p {
+    color: var(--gray);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.home-service-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 30px 0;
+}
+
+.hs-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.hs-feature i {
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 102, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .problems-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .brand-services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .problems-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .home-service-features {
+        grid-template-columns: 1fr;
     }
 }

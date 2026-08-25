@@ -26,6 +26,8 @@ const nav = document.querySelector('.nav');
 hamburger.addEventListener('click', () => {
     nav.classList.toggle('active');
     hamburger.classList.toggle('active');
+    const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !isExpanded);
 });
 
 // Close menu when clicking on a link
@@ -109,6 +111,24 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// FAQ Accordion
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+        const faqItem = button.parentElement;
+        const isActive = faqItem.classList.contains('active');
+        
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+            item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        
+        if (!isActive) {
+            faqItem.classList.add('active');
+            button.setAttribute('aria-expanded', 'true');
+        }
+    });
+});
 
 const testPrev = document.querySelector('.test-prev');
 const testNext = document.querySelector('.test-next');
@@ -194,7 +214,7 @@ if (contactForm) {
         };
 
         const message = [
-            'New Service Booking - SM Techno Service',
+            'New Service Booking - Sm Techno Services',
             '----------------------------------',
             `Name: ${name}`,
             `Phone: ${phone}`,
@@ -401,5 +421,5 @@ function handleSwipe() {
 }
 
 // Console easter egg
-console.log('%c SM Techno Service ', 'background: #0066ff; color: white; font-size: 20px; padding: 10px;');
-console.log('%c Hyderabad\'s #1 Washing Machine Service Center ', 'color: #64748b; font-size: 12px;');
+console.log('%c Sm Techno Services ', 'background: #0066ff; color: white; font-size: 20px; padding: 10px;');
+console.log('%c Washing Machine Repair in Hyderabad ', 'color: #64748b; font-size: 12px;');
