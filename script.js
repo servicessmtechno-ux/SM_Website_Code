@@ -232,6 +232,11 @@ if (contactForm) {
             const whatsappURL = `https://wa.me/919908473572?text=${encodeURIComponent(message)}`;
             window.open(whatsappURL, '_blank');
 
+            // Google Ads conversion - Contact conversion
+            if (typeof gtag === 'function') {
+                gtag('event', 'conversion', { 'send_to': 'AW-18504827597/XO5WCLXU-pgdEM2F5fdE' });
+            }
+
             submitBtn.innerHTML = '<i class="fas fa-check"></i> Opening WhatsApp...';
             submitBtn.style.background = '#25d366';
 
